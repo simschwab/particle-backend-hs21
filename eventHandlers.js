@@ -9,7 +9,6 @@ exports.registerEventHandlers = function (source) {
     source.addEventListener('traning-stopped', handleTrainingStopped);
     source.addEventListener('Cadence', handleCadence);
 
-
 }
 
 function handleMyEvent(event) {
