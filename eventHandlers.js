@@ -66,7 +66,9 @@ function handleTrainingStarted(event) {
         eventName: event.type,
         eventData: JSON.parse(event.data).data,
         deviceId: JSON.parse(event.data).coreid,
-        timestamp: JSON.parse(event.data).published_at
+        timestamp: JSON.parse(event.data).published_at,
+        repcounter: JSON.parse(event.data).repcounter
+
     };
 
     try {        
@@ -87,7 +89,10 @@ function handleTrainingStopped(event) {
         eventName: event.type,
         eventData: JSON.parse(event.data).data,
         deviceId: JSON.parse(event.data).coreid,
-        timestamp: JSON.parse(event.data).published_at
+        timestamp: JSON.parse(event.data).published_at,
+        repcounter: JSON.parse(event.data).repcounter,
+        cadence: JSON.parse(event.data).kadenz
+
     };
 
     try {        
@@ -109,6 +114,7 @@ function handleCadence(event) {
         eventData: JSON.parse(event.data).data,
         deviceId: JSON.parse(event.data).coreid,
         timestamp: JSON.parse(event.data).published_at,
+        repcounter: JSON.parse(event.data).repcounter,
         cadence: JSON.parse(event.data).kadenz
     };
 

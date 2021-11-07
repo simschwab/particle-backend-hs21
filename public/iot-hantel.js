@@ -33,11 +33,11 @@ async function setCounter() {
     alert("Response: " + response.data.result); // we could to something meaningful with the return value here ... 
 }
 
-async function getCounter() {
-    // request the variable "counter"
-    var response = await axios.get(rootUrl + "/api/device/0/variable/counter");
+async function getCandence() {
+    // request the variable "kadenz"
+    var response = await axios.get(rootUrl + "/api/device/0/variable/kadenz");
     var counter = response.data.result;
 
     // update the html element
-    document.getElementById("counter").innerHTML = counter;
+    document.getElementById("kadenz").innerHTML = counter;
 }
