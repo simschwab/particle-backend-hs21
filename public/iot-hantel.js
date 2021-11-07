@@ -18,7 +18,7 @@ function updateVariables(data) {
     // update the html elements
     document.getElementById("lastevent").innerHTML = JSON.stringify(data);
     if (data.eventName === "Training ist beendet.") {
-        document.getElementById("counterreps").innerHTML = data.eventData;
+        document.getElementById("trainingstate").innerHTML = data.eventData;
     }
 }
 

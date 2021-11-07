@@ -61,14 +61,12 @@ function handleMotionDetection(event) {
 }
 
 function handleTrainingStarted(event) {
-
     var data = {
         eventName: event.type,
         eventData: JSON.parse(event.data).data,
         deviceId: JSON.parse(event.data).coreid,
         timestamp: JSON.parse(event.data).published_at,
         repcounter: JSON.parse(event.data).repcounter
-
     };
 
     try {        
