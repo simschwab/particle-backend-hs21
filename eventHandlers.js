@@ -5,9 +5,9 @@ exports.sendEvent = null;
 exports.registerEventHandlers = function (source) {
     source.addEventListener('MyEvent', handleMyEvent);
     source.addEventListener('motion-detected', handleMotionDetection);
-    source.addEventListener('training-started', handleTrainingStarted);
-    source.addEventListener('traning-stopped', handleTrainingStopped);
-    source.addEventListener('Cadence', handleCadence);
+    source.addEventListener('Training hat angefangen.', handleTrainingStarted);
+    source.addEventListener('Training ist beendet.', handleTrainingStopped);
+    source.addEventListener('kadenz', handleCadence);
 
 }
 
@@ -108,7 +108,8 @@ function handleCadence(event) {
         eventName: event.type,
         eventData: JSON.parse(event.data).data,
         deviceId: JSON.parse(event.data).coreid,
-        timestamp: JSON.parse(event.data).published_at
+        timestamp: JSON.parse(event.data).published_at,
+        cadence: JSON.parse(event.data).kadenz
     };
 
     try {        
